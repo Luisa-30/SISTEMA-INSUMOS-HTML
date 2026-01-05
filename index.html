@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Inicio - NUTRIVE LTDA</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  // Menú superior fijo 
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand-left">
+        <div class="logo-small">
+          <img src="images/Logo/Nutrive.png" alt="Nutrive" />
+      </div>
+
+      <nav class="menu">
+        <a href="index.html">Inicio</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="solicitudes.html">Solicitudes</a>
+        <a href="inventario.html">Inventario</a>
+        <a href="reportes.html">Reportes</a>
+        <a href="buscar.html">Buscar</a>
+      </nav>
+
+      <div class="user-box">
+  <div class="user-info-box">
+    <div><strong>ID:</strong> <span id="userId">-</span></div>
+    <div><strong>Nombre:</strong> <span id="hdrUser">-</span></div>
+    <div><strong>Sección:</strong> <span id="hdrSeccion">-</span></div>
+  </div>
+  <button id="logoutTop" class="btn ghost">Cerrar sesión</button>
+</div>
+
+    </div>
+  </header>
+  <main class="container main-home">
+    <section class="hero card">
+      <div class="hero-left">
+        <h2>Bienvenido al Sistema de Solicitud de Insumos</h2>
+        <p class="small">Solicita materias primas, empaques y limpieza de forma rápida y controlada.</p>
+        <a href="solicitudes.html" class="btn">Ir a Solicitudes</a>
+      </div>
+      <div class="hero-images">
+        <img src="images/logo/Cheesecake.jpg" alt="Pastelería" />
+        <img src="images/logo/Panes.jpg" alt="Pan" />
+        <img src="images/logo/Helado.png" alt="Helado" />
+        <img src="images/logo/Tarta-chocolate.png" alt="Tarta" />
+      </div>
+    </section>
+
+    <section class="cards-grid">
+      <div class="card small-card">
+        <h4>Pedidos recientes</h4>
+        <div id="homeRecent">No hay datos (demo)</div>
+      </div>
+      
+      <div class="card small-card">
+        <h4>Accesos rápidos</h4>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <a class="link-like" href="inventario.html">Ver inventario</a>
+          <a class="link-like" href="reportes.html">Generar reportes</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="page-footer">Todos los derechos reservados – NUTRIVE LTDA</footer>
+  </main>
+
+<script src="js/app.js"></script>
+</body>
+</html>
+

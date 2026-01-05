@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Iniciar sesión - NUTRIVE LTDA</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="login-wrap">
+    <div class="login-card card">
+      <div class="logo-line">
+        <div class="logo-placeholder small">
+          <img src="images/Logo/Nutrive.png" alt="Logo Nutrive" style="width:100px;height:40px;object-fit:cover;">
+        </div>
+        <div style="text-align:right">
+          <h3 style="margin:0;color:var(--primary)">NUTRIVE LTDA</h3>
+          <div class="small">Sistema de Solicitud de Insumos</div>
+        </div>
+      </div>
+
+      <h2 style="margin-top:10px">Inicio de sesión</h2>
+      <p class="small">Ingresa tus datos o usa el botón “Rellenar demo” para probar el sistema.</p>
+
+      <div class="form-row">
+        <label for="id">Número de ID</label>
+        <input id="id" type="text" placeholder="Ej: 1001">
+      </div>
+
+      <div class="form-row">
+        <label for="name">Nombre</label>
+        <input id="name" type="text" placeholder="Ej: Luisa González">
+      </div>
+
+      <div class="form-row">
+        <label for="seccion">Sección</label>
+        <select id="seccion">
+          <option value="">Selecciona una sección</option>
+          <option value="Postres">Postres</option>
+          <option value="Pastelería">Pastelería</option>
+          <option value="Panadería">Panadería</option>
+          <option value="Salados">Salados</option>
+          <option value="Embalaje Postres">Embalaje Postres</option>
+          <option value="Embalaje Panadería">Embalaje Panadería</option>
+          <option value="Embalaje Salados">Embalaje Salados</option>
+          <option value="Almacén 1">Almacén 1</option>
+          <option value="Almacén 2">Almacén 2</option>
+          <option value="Limpieza">Limpieza</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label for="turno">Turno</label>
+        <select id="turno">
+          <option value="Mañana">Mañana (08:00 - 17:00)</option>
+          <option value="Mañana">Mañana (06:00 - 14:00)</option>
+          <option value="Tarde">Tarde (14:00 - 22:00)</option>
+          <option value="Noche">Noche (22:00 - 06:00)</option>
+        </select>
+      </div>
+
+      <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:12px">
+        <button class="btn ghost" id="demoFill">Rellenar demo</button>
+        <button class="btn" id="loginBtn">Iniciar sesión</button>
+      </div>
+
+      <div style="margin-top:12px; display:flex; justify-content:space-between; align-items:center;">
+        <a href="recuperar.html" class="small link-like">¿Olvidaste tu contraseña?</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

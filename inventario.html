@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Inventario - NUTRIVE</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand-left"><div class="logo-small"><img src="images/Logo/Nutrive.png" alt="Nutrive" /></div></div>
+      <nav class="menu">
+        <a href="index.html">Inicio</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="solicitudes.html">Solicitudes</a>
+        <a href="inventario.html">Inventario</a>
+        <a href="reportes.html">Reportes</a>
+        <a href="buscar.html">Buscar</a>
+      </nav>
+      <div class="user-box">
+  <div class="user-info-box">
+    <div><strong>ID:</strong> <span id="userId">-</span></div>
+    <div><strong>Nombre:</strong> <span id="hdrUser">-</span></div>
+    <div><strong>Sección:</strong> <span id="hdrSeccion">-</span></div>
+  </div>
+  <button id="logoutTop" class="btn ghost">Cerrar sesión</button>
+</div>
+
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Inventario</h2>
+      <p class="small">Listado de insumos y stock actual (demo).</p>
+
+      <div id="inventoryTable"></div>
+
+      <div style="margin-top:12px; display:flex; gap:8px; justify-content:flex-end">
+        <button class="btn" id="btnDownloadInv">Descargar inventario - PDF</button>
+      </div>
+    </section>
+
+    <footer class="page-footer">Todos los derechos reservados – NUTRIVE LTDA</footer>
+  </main>
+
+<script src="js/app.js"></script>
+</body>
+</html>

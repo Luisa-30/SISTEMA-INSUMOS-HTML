@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Solicitudes - NUTRIVE</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand-left">
+        <div class="logo-small"><img src="images/Logo/Nutrive.png" alt="Nutrive" /></div>
+      </div>
+      <nav class="menu">
+        <a href="index.html">Inicio</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="solicitudes.html">Solicitudes</a>
+        <a href="inventario.html">Inventario</a>
+        <a href="reportes.html">Reportes</a>
+        <a href="buscar.html">Buscar</a>
+      </nav>
+      <div class="user-box">
+  <div class="user-info-box">
+    <div><strong>ID:</strong> <span id="userId">-</span></div>
+    <div><strong>Nombre:</strong> <span id="hdrUser">-</span></div>
+    <div><strong>Sección:</strong> <span id="hdrSeccion">-</span></div>
+  </div>
+  <button id="logoutTop" class="btn ghost">Cerrar sesión</button>
+</div>
+
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2 id="nueva">Realizar nueva solicitud</h2>
+      <div class="alert info">Verifica stock antes de enviar. Usa + para agregar productos.</div>
+
+      <div class="form-row">
+        <label>Número de solicitud</label>
+        <input id="numSolicitud2" type="text" readonly>
+      </div>
+
+      <div class="form-row">
+        <label>Prioridad</label>
+        <select id="prioridad2">
+          <option value="false">Normal</option>
+          <option value="true">Urgente</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label>Destino / Producto</label>
+        <input id="destino2" type="text" placeholder="Ej: Pastel de chocolate">
+      </div>
+
+      <div class="add-item">
+        <button class="btn" id="btnAddProduct2">+ Agregar producto</button>
+      </div>
+
+      <div class="items-list" id="itemsList2"></div>
+
+      <div style="margin-top:12px; display:flex; gap:8px; justify-content:flex-end">
+        <button class="btn ghost" id="btnCancel2">Cancelar solicitud</button>
+        <button class="btn" id="btnSubmit2">Enviar solicitud</button>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top:12px">
+      <h3>Historial</h3>
+      <div id="historyArea"></div>
+      <div style="margin-top:8px; display:flex; gap:8px;">
+        <button class="btn" id="btnDownloadWeek">Descargar solicitudes - PDF</button>
+        <button class="btn ghost" id="btnClearHistory">Borrar historial </button>
+      </div>
+    </section>
+
+    <footer class="page-footer">Todos los derechos reservados – NUTRIVE LTDA</footer>
+  </main>
+
+<script src="js/app.js"></script>
+</body>
+</html>
