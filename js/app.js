@@ -160,7 +160,7 @@ function submitForm2(){
     const q = Number(qty.value); if(q<=0){ alert('Cantidad inválida'); return; }
     if(q>it.stock){ alert(`Stock insuficiente para ${it.nombre}. Disponible: ${it.stock}`); return; }
     solicitud.items.push({ idInsumo: it.id, nombre: it.nombre, cantidad: q, tamaño: size.value||''});
-    it.stock -= q; // demo: restar stock
+    it.stock -= q; //  restar stock
   }
   const hist = loadHistory(); hist.unshift(solicitud); saveHistory(hist);
   alert('Solicitud enviada: ' + solicitud.idSolicitud);
@@ -207,7 +207,7 @@ async function downloadInventoryPDF(){
   pdf.save('inventario.pdf');
 }
 
-/* Descarga solicitudes última semana (demo) */
+/* Descarga solicitudes */
 async function downloadThisWeekPDF(){
   const hist = loadHistory();
   if(hist.length===0){ alert('No hay solicitudes en historial'); return; }
@@ -296,3 +296,19 @@ window.addEventListener('load', ()=>{
   // si estamos en solicitudes page inicializar
   if(document.getElementById('btnAddProduct2')) initSolicitudes();
 });
+/* --- Marcar opción activa en verde del menú superior --- */
+function marcarMenuActivo(){
+  const links = document.querySelectorAll('.menu a');
+  const actual = window.location.pathname.split('/').pop();
+
+  links.forEach(link => {
+    const href = link.getAttribute('href');
+    if(href === actual){
+      link.classList.add('accent');
+    } else {
+      link.classList.remove('accent');
+    }
+  });
+}
+
+window.addEventListener('load', marcarMenuActivo);
